@@ -1,0 +1,143 @@
+# Overview
+
+## Introduction
+
+The  [Congress.gov Application Programming Interface (API)](https://api.congress.gov/)  provides a method for Congress and the public to view, retrieve, and re-use machine-readable data from collections available on Congress.gov. This repository contains information on accessing and using the Congress.gov API, as well as documentation on available endpoints.
+
+Within the Congress.gov API, responses are returned in XML or JSON formats. An `<api-root>` element will be visible for responses returned in XML.
+
+For every request, three elements are returned:
+
+- The **Request** element contains information about the API request itself. This includes the format and the `<contentType>`; this is essentially the information you might expect to see in a request header.
+- The **Pagination** element contains a count of how many total data items are contained within the response, a URL containing the next page of results; and, if the offset is greater than 1, a URL containing the previous page of results.
+- The **Data** element, the name of which changes depending on the endpoint utilized (i.e. `<bills>` for the bill endpoint, `<amendments>` for the amendment endpoint, etc.). This element contains a list of all data items returned by your API call.
+
+## Keys
+
+An API key is required for access. Sign up for a key [here](https://api.congress.gov/sign-up/). 
+
+Learn more on how you can use your API key to access the Congress.gov API on [api.data.gov](https://api.data.gov/docs/api-key/).
+
+## Versioning
+
+The current version of the API is version 3 (v3). Prior versions were used by the Government Publishing Office (GPO) for its [Bulk Data Repository](https://www.govinfo.gov/bulkdata), and other clients.
+
+## Rate Limit
+
+The rate limit is set to 5,000 requests per hour.
+
+## Limit and Offset
+
+By default, the API returns 20 results starting with the first record. The 20 results limit can be adjusted up to 250 results. If the limit is adjusted to be greater than 250 results, only 250 results will be returned. The offset, or the starting record, can also be adjusted to be greater than 0. 
+
+## Coverage and Estimated Update Times for Congress.gov Collections
+
+Coverage information for Congress.gov collections data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. This page also provides estimated update times for Congress.gov collections. 
+
+## Support
+
+Congress.gov staff will monitor and respond to any [issues](https://github.com/LibraryOfCongress/api.congress.gov/issues) created in this repository, and will initiate actions, as necessary. Before creating an issue in the repository, please review existing issues and add a comment to any issues relevant to yours. 
+
+## Change Management
+
+Congress.gov staff will issue change management communication through the [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) so that consumers are able to adjust accordingly. The [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) will contain information on updates to the API, the impacted endpoints, and the expected production release date. Milestones are also used to tag issues with expected production release date information.
+
+## Relevant Privacy Policies 
+1. API keys and user registration follow the data.gov privacy policy. Read more [here](https://data.gov/privacy-policy/).
+2. API content follows the Library of Congress privacy policy. Read more [here](https://www.loc.gov/legal/privacy-policy/).
+6Z5wrFaGEqVx2zvisjntLvPglE1SClM3MirP5BiU
+For additional support, please contact us. When contacting us, please tell us what API you're accessing and provide the following account details so we can quickly find you:
+
+Account Email: gitsruns@gmail.com
+<iframe width="932" height="524" src="https://www.youtube.com/embed/_W9B7qc9lVc" title="Codespaces - Your instant dev box in the cloud" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="932" height="524" src="https://www.youtube.com/embed/_W9B7qc9lVc" title="Codespaces - Your instant dev box in the cloud" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+{
+  "ns": "yt",
+  "el": "detailpage",
+  "cpn": "b9ewbqMca4bKuwwH",
+  "ver": 2,
+  "cmt": "30.409",
+  "fmt": "137",
+  "fs": "0",
+  "rt": "44.264",
+  "euri": "",
+  "lact": 2,
+  "cl": "733552769",
+  "mos": 0,
+  "state": "8",
+  "volume": 100,
+  "subscribed": "1",
+  "cbr": "Chrome",
+  "cbrver": "133.0.0.0",
+  "c": "WEB",
+  "cver": "2.20250307.01.00",
+  "cplayer": "UNIPLAYER",
+  "cos": "X11",
+  "cplatform": "DESKTOP",
+  "hl": "th_TH",
+  "cr": "TH",
+  "len": "97.361",
+  "fexp": "v1,24004644,2969,431748,60172,67154,133212,14625955,11684381,53408,9105,18310,4420,2821,78212,8479,19339,18644,9664,3382,1823,47210,15124,65,4791,8735,391,12774,13730,9252,148,3331,690,1334,495,10511,5335,3889,3407,4114,2110,4351,238,5517,4610,3499,1315,2,1014,886,733,391,272,2,1227,3295,912,4234,1502,537,1083,1089,2433,3598,2541",
+  "afmt": "251",
+  "muted": "0",
+  "conn": "7",
+  "cc": ".en-US",
+  "docid": "_W9B7qc9lVc",
+  "ei": "6APOZ-mWGbqy9fwPpt-piAg",
+  "plid": "AAYv70shj1fpGS_k",
+  "referrer": "https://www.youtube-nocookie.com/",
+  "sdetail": "p:www.youtube-nocookie.com/",
+  "sourceid": "r",
+  "of": "oEjmY5FVJBq2LLPdObYeZw",
+  "osid": "AAAAARt7Bck:AOeUNAaBlZvI9Ut1ME5z2sTfcjeTSWwBjg",
+  "vm": "CAEQABgEOjJBSHFpSlRJcTRzOFJjV0lmSTZlOGpuZVM4aWxSUnNpTzhHc0YwTE1TRzF2a01BNllkd2JfQUZVQTZSUTAwcVRMVWJpcWhiTmZfTzFIeEt0cWxoenI5MkdSekZrdUtaWDBHT0EtNVZEVHl4VlpPQ29TWGdCRGozT0NwajZTWjRGb3VoakJkNXpla19QT2JEU0N3TjQ",
+  "vct": "30.409",
+  "vd": "97.361",
+  "vpl": "20.697-30.409",
+  "vbu": "20.001-58.667",
+  "vbs": "0.000-97.361",
+  "vpa": "0",
+  "vsk": "0",
+  "ven": "0",
+  "vpr": "1",
+  "vrs": "4",
+  "vns": "2",
+  "vec": "null",
+  "vemsg": "",
+  "vvol": "1",
+  "vdom": "1",
+  "vsrc": "1",
+  "vw": "932",
+  "vh": "524",
+  "lct": "30.151",
+  "lsk": false,
+  "lmf": false,
+  "lbw": "5075681.769",
+  "lhd": "0.092",
+  "lst": "308.563",
+  "laa": "itag_251_type_3_src_reslicemakeSliceInfosMediaBytes_segsrc_reslicemakeSliceInfosMediaBytes_seg_6_range_901450-915266_time_69.0-70.0_off_123345_len_13817_end_1",
+  "lva": "itag_137_type_3_src_reslicemakeSliceInfosMediaBytes_segsrc_reslicemakeSliceInfosMediaBytes_seg_10_range_3176960-3196905_time_58.3-58.7_off_259702_len_19946_end_1",
+  "lar": "itag_251_type_3_src_reslicemakeSliceInfosMediaBytes_segsrc_reslicemakeSliceInfosMediaBytes_seg_6_range_901450-915266_time_69.0-70.0_off_123345_len_13817_end_1",
+  "lvr": "itag_137_type_3_src_reslicemakeSliceInfosMediaBytes_segsrc_reslicemakeSliceInfosMediaBytes_seg_10_range_3176960-3196905_time_58.3-58.7_off_259702_len_19946_end_1",
+  "laq": "0",
+  "lvq": "0",
+  "lab": "20.001-70.001",
+  "lvb": "16.000-58.667",
+  "ismb": 3100000,
+  "leader": 1,
+  "relative_loudness": "-10.960",
+  "optimal_format": "1080p",
+  "user_qual": 1080,
+  "release_version": "youtube.player.web_20250304_00_RC00",
+  "debug_videoId": "_W9B7qc9lVc",
+  "0sz": "false",
+  "op": "",
+  "yof": "false",
+  "dis": "",
+  "gpu": "Adreno_(TM)_619",
+  "ps": "desktop-polymer",
+  "debug_playbackQuality": "hd1080",
+  "debug_date": "Mon Mar 10 2025 04:11:49 GMT+0700 (เวลาอินโดจีน)",
+  "origin": "https://www.youtube.com",
+  "timestamp": 1741554709042
+}
